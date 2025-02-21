@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthikeyan K - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Karthikeyan K</h1>
+        <p class="fade-in">B.E Computer Science (Cyber Security)</p>
+    </header>
+
+    <section class="projects">
+        <h2 class="slide-up">Projects</h2>
+        <div class="project-card">
+            <h3>Gallery App</h3>
+            <p>A MERN stack-based app for managing photos with category-based organization.</p>
+            <p><b>Tech:</b> MongoDB, Express, React.js, Node.js</p>
+        </div>
+        <div class="project-card">
+            <h3>Secure File Transfer</h3>
+            <p>Encrypted file transfer using PBKDF2 and SHA-256 over a secure channel.</p>
+            <p><b>Tech:</b> Python, Cryptography, PBKDF2, Tkinter, Sockets</p>
+        </div>
+        <div class="project-card">
+            <h3>Malicious Document Detection</h3>
+            <p>ML-powered system to detect harmful documents using metadata analysis.</p>
+            <p><b>Tech:</b> Python, Scikit-learn, Pandas, Random Forest, Tkinter</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2 class="slide-up">Skills</h2>
+        <p>Java, C, Python, C++, ReactJS, HTML, CSS, JavaScript, MongoDB, DSA</p>
+    </section>
+
+    <section class="contact">
+        <h2 class="slide-up">Contact</h2>
+        <a href="mailto:karthikeyantpk007@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/karthikeyantpk" class="icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/karthikeyan-kumaresan-b9a663327/" class="icon"><i class="fab fa-linkedin"></i></a>
+    </section>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+h1, h2 {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.icon {
+    font-size: 24px;
+    margin: 10px;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: yellow;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".slide-up").forEach((el) => {
+        el.style.animation = "slideUp 1.5s ease-in-out";
+    });
+});
